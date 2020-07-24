@@ -11,6 +11,8 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 // 导入flexible 动态设置rem大小
 import 'amfe-flexible'
+// 导入字体图标
+import './styles/iconfont.less'
 // 注册vant
 Vue.use(Vant)
 
