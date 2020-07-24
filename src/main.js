@@ -13,6 +13,8 @@ import 'vant/lib/index.css'
 import 'amfe-flexible'
 // 导入字体图标
 import './styles/iconfont.less'
+// 导入
+import './styles/variable.less'
 // 注册vant
 Vue.use(Vant)
 
