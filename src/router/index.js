@@ -1,27 +1,23 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import App from './App.vue'
+// 导入 router
+import router from './router'
+// 导入 store
+import store from './store'
+// 导入 normalize.css
+import 'normalize.css'
+// 整合vant
+import Vant from 'vant'
+import 'vant/lib/index.css'
+// 注册vant
+Vue.use(Vant)
 
-Vue.use(VueRouter)
+Vue.config.productionTip = false
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
-
-const router = new VueRouter({
-  routes
-})
-
-export default router
+new Vue({
+  render: h => h(App),
+  // 挂载 router
+  router,
+  // 挂载 store
+  store
+}).$mount('#app')
