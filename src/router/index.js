@@ -1,16 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import login from '../views/login/login.vue'
 import Company from '../views/Company/Company.vue'
 import Find from '../views/Find/Find.vue'
 import My from '../views/My/My.vue'
 import Question from '../views/Question/Question.vue'
+//登陆组件
+import login from '../views/login/login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [{
         path: '/',
-        redirect: '/login'
+        redirect: '/login',
+    }, {
+        path: '/login',
+        component: login,
     }, {
         path: '/Company',
         component: Company,
@@ -42,9 +46,6 @@ const routes = [{
             //显示tabbar
             shwoTabbar: true
         }
-    }, {
-        path: '/login',
-        component: login,
     },
 ]
 
